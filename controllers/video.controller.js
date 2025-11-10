@@ -318,7 +318,7 @@ const searchVideos = async ({ page = 1, limit = 10, search = null, collection = 
 // Endpoint to delete a video
 const deleteVideo = async (req, res) => {
   try {
-    const video = await Video.findOneAndRemove({
+    const video = await Video.findOneAndDelete({
       videoId: req.params.videoId,
       channel: req.channel.id,
     })
